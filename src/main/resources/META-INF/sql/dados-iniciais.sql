@@ -1,0 +1,1 @@
+insert into equipe(id,nome,presidente,tecnico) values (1,'Aguia','Wagner','Rosanildo');

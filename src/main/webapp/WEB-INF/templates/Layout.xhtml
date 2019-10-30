@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<f:facet name="first">
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+	</f:facet>
+
+	<title>LESS- Liga Esportiva de São Sebastão</title>
+
+	<h:outputStylesheet library="less" name="styles/layout.css" />
+	<h:outputStylesheet library="less" name="styles/components.css" />
+
+
+	<h:outputScript target="body" library="primefaces" name="jquery/jquery.js" />
+	<h:outputScript target="body" library="less" name="javascripts/app.js" />
+</h:head>
+
+<h:body>
+	<header class="aew-topbar">
+
+			<h:graphicImage library="less" name="imagens/logoless/less.png" />
+		<a href="#" class="aew-toggle js-toggle"><i class="fa  fa-bars"> Menu</i></a>
+
+	</header>
+	<div class="ui-fluid">
+	<h:form id="frm" style="margin-top:140px">
+
+		<p:menubar>
+			<p:submenu label="Inicio" />
+
+			<p:submenu label="Divisões">
+				<p:submenu label="1ª Divisão">
+					<p:menuitem value="Times" />
+					<p:menuitem value="Tabela" />
+					<p:menuitem value="Videos" />
+					<p:menuitem value="Fotos" />
+				</p:submenu>
+				<p:submenu label="2ª Divisão">
+					<p:menuitem value="Times" />
+					<p:menuitem value="Tabela" />
+				</p:submenu>
+				<p:submenu label="3ª Divisão">
+					<p:menuitem value="Times" />
+					<p:menuitem value="Tabela" />
+				</p:submenu>
+			</p:submenu>		
+			<p:submenu label="Times">
+			</p:submenu>
+			
+		</p:menubar>
+	</h:form>
+	</div>
+
+	<section class="aew-content  js-content">
+		<ui:insert name="content">
+
+		</ui:insert>
+
+	</section>
+</h:body>
+
+</html>
