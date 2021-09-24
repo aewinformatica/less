@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<ui:composition template="WEB-INF/templates/layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="content">
+		<h1 align="center">Liga Esportiva de São Sebastião</h1>
+<f:metadata>
+<f:viewAction action="#{controleTimesBean.consultar}" />
+</f:metadata>
+
+		<h:form id="frm-Equipe">
+		<p:dataTable value="#{controleTimesBean.todosTimes}"   var="equipe" id="Equipe-Table" >
+		<p:column headerText="Nome">
+		<h:outputText value="#{equipe.nome}" />
+		</p:column>
+		<p:column headerText="Presidente">
+		<h:outputText value="#{equipe.presidente}" />
+		</p:column>
+		<p:column headerText="Tecnico">
+		<h:outputText value="#{equipe.tecnico}" />
+		</p:column>
+		</p:dataTable>
+		</h:form>
+		
+
+	</ui:define>
+
+</ui:composition>
+
+
+
+
+
+
